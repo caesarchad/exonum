@@ -77,7 +77,7 @@ The project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
   To get the sources of an artifact, use query `type=artifact&name=$name&version=$version`,
   where `$name` and `$version` are replaced with appropriate values. (#1590)
 
-- A type for transaction position in block has been changed for `u32`. (#1668)
+- A type for a position of transaction in the block has been changed for `u32`. (#1668)
 
 #### exonum-cli
 
