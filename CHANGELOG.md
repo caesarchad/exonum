@@ -79,6 +79,10 @@ The project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html)
 
 - A type for a position of transaction in the block has been changed for `u32`. (#1668)
 
+- `update_service_status` now does not return a value. (#1659)
+
+- `BlockchainBuilder::build` now returns `BlockchainMut` instead of `Result`. (#1659)
+
 #### exonum-cli
 
 - `supervisor-mode` parameter has been added for `generate-template` subcommand.
@@ -165,6 +169,8 @@ Indexes iterators names has been shortened to `Iter`, `Keys` and `Values`. (#162
   and erase index metadata. (#1630)
 
 - `impl_serde_hex_for_binary_value` macro was moved from core to `merkledb`. (#1629)
+
+- It is now possible to iterate over keys of the indexes within a group. (#1662)
 
 #### exonum-supervisor
 
