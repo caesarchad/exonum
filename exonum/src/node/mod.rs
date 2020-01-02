@@ -1,4 +1,4 @@
-// Copyright 2019 The Exonum Team
+// Copyright 2020 The Exonum Team
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ pub(crate) use self::state::SharedConnectList;
 
 use exonum_keys::Keys;
 use exonum_merkledb::{Database, DbOptions, ObjectHash};
-use failure::Error;
+use failure::{ensure, format_err, Error};
 use futures::{sync::mpsc, Future, Sink};
 use tokio_core::reactor::Core;
 use tokio_threadpool::Builder as ThreadPoolBuilder;

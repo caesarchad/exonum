@@ -1,4 +1,4 @@
-// Copyright 2019 The Exonum Team
+// Copyright 2020 The Exonum Team
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -173,6 +173,10 @@ mod blockchain_data;
 mod dispatcher;
 pub(crate) mod error;
 mod types;
+
+// Re-export for serializing `ExecutionError` via `serde`.
+#[doc(hidden)]
+pub use error::execution_error as execution_error_serde;
 
 /// Persistent identifier of a supervisor service instance.
 ///
