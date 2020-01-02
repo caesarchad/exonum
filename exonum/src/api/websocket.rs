@@ -114,7 +114,7 @@ impl CommittedTransactionSummary {
         let tx_result = schema.transaction_result(location)?;
         let location_proof = schema
             .block_transactions(location.block_height())
-            .get_proof(location.position_in_block() as u64);
+            .get_proof(u64::from(location.position_in_block()));
         let time = median_precommits_time(
             &schema
                 .block_and_precommits(location.block_height())
