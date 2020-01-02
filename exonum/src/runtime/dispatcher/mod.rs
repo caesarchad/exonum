@@ -305,7 +305,7 @@ impl Dispatcher {
         &self,
         fork: &mut Fork,
         tx_id: Hash,
-        tx_index: u64,
+        tx_index: u32,
         tx: &Verified<AnyTx>,
     ) -> Result<(), ExecutionError> {
         let caller = Caller::Transaction {
